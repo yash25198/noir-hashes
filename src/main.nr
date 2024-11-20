@@ -17,6 +17,11 @@ pub fn sha384<let N: u32>(msg: [u8; N], msg_len: u32) -> [u8; 48] {
     h384
 }
 
+fn main(msg: [u8; 512], msg_len: u32) -> () {
+    let hash = sha512(msg, msg_len);
+    println(hash);
+}
+
 mod tests {
     use super::{sha512, sha384};
 
